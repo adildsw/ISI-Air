@@ -16,9 +16,35 @@
       <h1 class="text-lg text-black font-semibold">ISI-Air Dataset</h1>
       <div class="grow"></div>
 
-      <a href="https://github.com/adildsw/isi-air/releases" target="_blank">
-        <img src="./assets/github.png" alt="Dataset GitHub Repo" class="w-6 h-6" />
-      </a>
+      <div class="relative">
+        <button id="menu-btn" aria-label="Menu"
+          class="p-2 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
+          onclick="toggleMenu()">
+          <img src="./assets/hamburger.png" alt="Menu" class="w-4 h-4" />
+        </button>
+        <div id="menu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-slate-200 rounded-lg shadow-lg z-10">
+          <a href="https://github.com/adildsw/isi-air/releases/download/1.0/isi-air-dataset.zip" target="_blank"
+            class="flex flex-row gap-2 items-center px-4 py-2 text-sm text-black hover:bg-slate-100">
+            <img src="./assets/download.png" alt="Download Dataset" class="inline w-4 h-4" />
+            Download Dataset
+          </a>
+          <a href="https://link.springer.com/article/10.1007/s42979-020-00384-9" target="_blank"
+            class="flex flex-row gap-2 items-center px-4 py-2 text-sm text-black hover:bg-slate-100">
+            <img src="./assets/doc.png" alt="GitHub" class="inline w-4 h-4" />
+            Research Paper
+          </a>
+          <a href="https://github.com/adildsw/air-writing-v2" target="_blank"
+            class="flex flex-row gap-2 items-center px-4 py-2 text-sm text-black hover:bg-slate-100">
+            <img src="./assets/pencil.png" alt="Air Writing Repository" class="inline w-4 h-4" />
+            Air-Writing Project
+          </a>
+          <a href="https://github.com/adildsw/isi-air" target="_blank"
+            class="flex flex-row gap-2 items-center px-4 py-2 text-sm text-black hover:bg-slate-100">
+            <img src="./assets/github.png" alt="GitHub" class="inline w-4 h-4" />
+            Dataset Repository
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="flex flex-row grow h-10 rounded-lg">
@@ -66,12 +92,12 @@
         <span id="class-value">NA</span> |
         <span id="set-value">NA</span>
       </span>
-      <button id="next-sample-btn" aria-label="Download Sample"
-        class="px-1 py-1 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
-        onclick="downloadSample()"><img src="./assets/download.png" alt="Download Dataset" class="w-6 h-6" /></button>
       <button id="random-sample-btn" aria-label="Select Random Sample"
         class="px-2 py-1 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
         onclick="loadRandomSample()">Randomize</button>
+      <button id="next-sample-btn" aria-label="Download Sample"
+        class="p-2 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
+        onclick="downloadSample()"><img src="./assets/download.png" alt="Download Sample" class="w-4 h-4" /></button>
     </div>
 
   </div>

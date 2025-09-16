@@ -43,5 +43,6 @@ If you've used this dataset in your research or project, consider citing the ass
 ```
 
 ## Attribution
-The dataset browser uses a Numpy JS read/write script created by [Lingdong Huang](https://gist.github.com/LingDong-/b24f172ba0888976143463a8801e2040).
-The icons used in the browser are PD/MIT licensed and sourced from [SVGRepo](https://www.svgrepo.com/).
+The dataset browser uses a Numpy JS read/write script by [Lingdong Huang](https://gist.github.com/LingDong-/b24f172ba0888976143463a8801e2040).
+
+The icons used in the dataset browser are PD/MIT licensed and sourced from [SVGRepo](https://www.svgrepo.com/).

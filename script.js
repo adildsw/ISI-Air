@@ -7,6 +7,28 @@ let selectedCoords = [
 ];
 let selectedPointIdx = 0;
 
+const toggleMenu = () => {
+  const menu = document.getElementById("menu");
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+  } else {
+    menu.classList.add("hidden");
+  }
+};
+
+// if i click outside the menu, close it
+window.onclick = (event) => {
+  const menu = document.getElementById("menu");
+  const menuButton = document.getElementById("menu-btn");
+  if (
+    !menu.contains(event.target) &&
+    !menuButton.contains(event.target) &&
+    !menu.classList.contains("hidden")
+  ) {
+    menu.classList.add("hidden");
+  }
+};
+
 const coordPointSlider = document.getElementById("point-slider");
 coordPointSlider.addEventListener("input", (event) => {
   selectedPointIdx = parseInt(event.target.value);
