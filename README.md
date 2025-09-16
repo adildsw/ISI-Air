@@ -1,6 +1,8 @@
 # ISI-Air
 :pencil: Online handwritten English numeral dataset created in an Air-Writing environment.
 
+The dataset can be browsed [here](https://adildsw.github.io/isi-air/).
+
 ## Citation
 If you've used this dataset in your research or project, consider citing the associated papers:
 ```
@@ -39,3 +41,7 @@ If you've used this dataset in your research or project, consider citing the ass
   url={https://link.springer.com/chapter/10.1007/978-3-030-41404-7_6}
 }
 ```
+
+## Attribution
+The dataset browser uses a Numpy JS read/write script created by [Lingdong Huang](https://gist.github.com/LingDong-/b24f172ba0888976143463a8801e2040).
+The icons used in the browser are PD/MIT licensed and sourced from [SVGRepo](https://www.svgrepo.com/).

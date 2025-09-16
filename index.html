@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISI-Air Dataset Browser</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="./npy-rw.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-xs bg-white flex flex-col gap-2 rounded-2xl shadow-md border border-slate-200 p-4">
+    <div class="pb-1 w-full flex flex-row items-center gap-2">
+      <h1 class="text-lg text-black font-semibold">ISI-Air Dataset</h1>
+      <div class="grow"></div>
+
+      <a href="https://github.com/adildsw/isi-air/releases" target="_blank">
+        <img src="./assets/github.png" alt="Dataset GitHub Repo" class="w-6 h-6" />
+      </a>
+    </div>
+
+    <div class="flex flex-row grow h-10 rounded-lg">
+      <button id="set-test-btn" class="grow rounded-l-lg cursor-pointer hover:bg-slate-100 border-1 border-slate-100"
+        onclick="selectSet('test')">Test</button>
+      <button id="set-train-btn" class="grow rounded-r-lg cursor-pointer hover:bg-slate-100 border-1 border-slate-100"
+        onclick="selectSet('train')">Train</button>
+    </div>
+
+    <div class="flex flex-row grow h-10 rounded-lg">
+      <button id="class-0-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100 rounded-l-lg"
+        onclick="selectClass(0)">0</button>
+      <button id="class-1-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(1)">1</button>
+      <button id="class-2-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(2)">2</button>
+      <button id="class-3-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(3)">3</button>
+      <button id="class-4-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(4)">4</button>
+      <button id="class-5-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(5)">5</button>
+      <button id="class-6-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(6)">6</button>
+      <button id="class-7-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(7)">7</button>
+      <button id="class-8-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100"
+        onclick="selectClass(8)">8</button>
+      <button id="class-9-btn" class="grow border-1 border-slate-100 cursor-pointer hover:bg-slate-100 rounded-r-lg"
+        onclick="selectClass(9)">9</button>
+    </div>
+
+    <canvas id="canvas" class="w-full aspect-square border border-slate-200 rounded-lg bg-white"></canvas>
+
+    <div class="flex flex-row gap-2">
+      <input type="range" id="point-slider" min="0" max="100" value="50" class="w-full" />
+      <button id="play-btn"
+        class="w-8 h-8 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
+        onclick="playAnimation()">▶</button>
+    </div>
+
+    <div class="flex flex-row gap-2 items-center border-t-1 border-slate-100 pt-2">
+      <span id="sample-indicator" class="grow text-center text-black">
+        <span id="sample-value" class="font-bold">#NA</span> |
+        <span id="class-value">NA</span> |
+        <span id="set-value">NA</span>
+      </span>
+      <button id="next-sample-btn" aria-label="Download Sample"
+        class="px-1 py-1 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
+        onclick="downloadSample()"><img src="./assets/download.png" alt="Download Dataset" class="w-6 h-6" /></button>
+      <button id="random-sample-btn" aria-label="Select Random Sample"
+        class="px-2 py-1 bg-white border-1 border-slate-200 rounded-lg flex items-center justify-center cursor-pointer hover:bg-slate-200"
+        onclick="loadRandomSample()">Randomize</button>
+    </div>
+
+  </div>
+</body>
+
+</html>
