@@ -16,8 +16,19 @@ const toggleMenu = () => {
   }
 };
 
-// if i click outside the menu, close it
 window.onclick = (event) => {
+  const menu = document.getElementById("menu");
+  const menuButton = document.getElementById("menu-btn");
+  if (
+    !menu.contains(event.target) &&
+    !menuButton.contains(event.target) &&
+    !menu.classList.contains("hidden")
+  ) {
+    menu.classList.add("hidden");
+  }
+};
+
+window.ontouchstart = (event) => {
   const menu = document.getElementById("menu");
   const menuButton = document.getElementById("menu-btn");
   if (
